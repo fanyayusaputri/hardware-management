@@ -14,14 +14,14 @@
                         <div class="overlay">
                             <!-- <button type="button" class="btn btn-secondary" title="Quick View"><i class="fas fa-eye"></i></button> -->
                         </div>
-                      @php
-    $imgSrc = \Illuminate\Support\Str::startsWith($item->gambar, ['http://', 'https://', 'assets/', 'storage/'])
-        ? asset($item->gambar)
-        : asset('storage/' . $item->gambar);
-@endphp
+                         @php
+                            $imgSrc = \Illuminate\Support\Str::startsWith($item->gambar, ['http://', 'https://', 'assets/', 'storage/'])
+                                ? asset($item->gambar)
+                                : asset('storage/' . $item->gambar);
+                        @endphp
 
 
-<img src="{{ $imgSrc }}" alt="{{ $item->nama }}" class="card-img-top">
+                        <img src="{{ $imgSrc }}" alt="{{ $item->nama }}" class="card-img-top">
 
                         
                         <div class="card-body">
@@ -42,17 +42,17 @@
                 <div class="col mb-4">
                     <div class="card fixed-card">
                         <div class="overlay"></div>
-                     @php
-    $imgSrc = \Illuminate\Support\Str::startsWith($item->gambar, ['http://', 'https://', 'assets/', 'storage/'])
-        ? asset($item->gambar)
-        : asset('storage/' . $item->gambar);
-@endphp
+                        @php
+                            $imgSrc = \Illuminate\Support\Str::startsWith($item->gambar, ['http://', 'https://', 'assets/', 'storage/'])
+                                ? asset($item->gambar)
+                                : asset('storage/' . $item->gambar);
+                        @endphp
 
 
-<img src="{{ $imgSrc }}" alt="{{ $item->nama }}" class="card-img-top">
+                        <img src="{{ $imgSrc }}" alt="{{ $item->nama }}" class="card-img-top">
 
                         <div class="card-body">
-                         <i class="fas fa-eye"></i>
+                        
                             <h3>{{ $item->nama }}</h3>
                             <p>Status: {{ $item->status }}</p>
                             <p>Stoik: {{ $item->stok }}</p>
@@ -69,14 +69,14 @@
                 <div class="col mb-4">
                     <div class="card fixed-card">
                         <div class="overlay"></div>
-                     @php
-    $imgSrc = \Illuminate\Support\Str::startsWith($item->gambar, ['http://', 'https://', 'assets/', 'storage/'])
-        ? asset($item->gambar)
-        : asset('storage/' . $item->gambar);
-@endphp
+                        @php
+                            $imgSrc = \Illuminate\Support\Str::startsWith($item->gambar, ['http://', 'https://', 'assets/', 'storage/'])
+                                ? asset($item->gambar)
+                                : asset('storage/' . $item->gambar);
+                        @endphp
 
 
-<img src="{{ $imgSrc }}" alt="{{ $item->nama }}" class="card-img-top">
+                        <img src="{{ $imgSrc }}" alt="{{ $item->nama }}" class="card-img-top">
 
                         <div class="card-body">
                             <h3>{{ $item->nama }}</h3>

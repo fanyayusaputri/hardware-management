@@ -9,11 +9,20 @@
             <div class="row g-0">
                 <!-- Gambar Perangkat -->
                 <div class="col-md-4">
-                    <img 
-                        src="{{ asset('storage/' . $perangkat->gambar) }}" 
-                        class="card-img-top img-fluid" 
-                        alt="{{ $perangkat->nama }}" 
-                        style="max-height: 250px; object-fit: cover;">
+                @php
+                    use Illuminate\Support\Str;
+
+                    $gambarPath = Str::startsWith($perangkat->gambar, 'assets/') 
+                        ? asset($perangkat->gambar) 
+                        : asset('storage/' . $perangkat->gambar);
+                @endphp
+
+                <img 
+                    src="{{ $gambarPath }}" 
+                    class="card-img-top img-fluid" 
+                    alt="{{ $perangkat->nama }}" 
+                    style="max-height: 250px; object-fit: cover;">
+
                 </div>
 
                 <!-- Info Perangkat -->
